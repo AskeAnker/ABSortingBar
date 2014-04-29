@@ -17,19 +17,24 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     
     tableData = [[NSMutableArray alloc]init];
     
+    //Dummy data
+    
+    NSMutableArray *alphabet = [[NSMutableArray alloc] initWithArray:[[UILocalizedIndexedCollation currentCollation] sectionIndexTitles]];
+    [alphabet removeLastObject];
+    
+    
     for (int i=0; i<1000; i++) {
         int random = arc4random_uniform(i);
-        NSDictionary *data = @{@"key1": [NSString stringWithFormat:@"name%i", i], @"key2":[NSNumber numberWithFloat:i/100.0*random], @"key3": [NSNumber numberWithInt:abs(i-random)], @"key4":[NSNumber numberWithFloat:i/10.0*random], @"key5":[NSString stringWithFormat:@"textValue%i", abs(i-1000) ]};
+        NSDictionary *data = @{@"key1": [NSString stringWithFormat:@"%@%i",[alphabet objectAtIndex:arc4random_uniform(alphabet.count)], i], @"key2":[NSNumber numberWithFloat:i/100.0*random], @"key3": [NSNumber numberWithInt:abs(i-random)], @"key4":[NSNumber numberWithFloat:i/10.0*random], @"key5":[NSString stringWithFormat:@"textValue%i", abs(i-1000) ]};
         [tableData addObject:data];
     }
     
     
     sortingBar = [[ABSegmentedControl alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50)];
-    sortingBar.backgroundColor = [UIColor greenColor];
+    sortingBar.backgroundColor = [UIColor whiteColor];
     [sortingBar numberOfSegments:5];
     sortingBar.delegate = self;
     
@@ -48,10 +53,10 @@
     [self.view addSubview:sortingBar];
     
     
-    //If all segments should have same layout, just loop through them
+    //If all segments should have similar layout (which in most cases they should), just loop through them
 
     for (int i=0; i<[sortingBar numberOfSegments]; i++) {
-        [sortingBar segmentAtIndex:i].titleLabel.font = [UIFont systemFontOfSize:15];
+        [sortingBar segmentAtIndex:i].titleLabel.font = [UIFont fontWithName:@"Arial" size:15];
         [[sortingBar segmentAtIndex:i] setTitle:[[NSString stringWithFormat:@"key%i", i+1]uppercaseString] forState:UIControlStateNormal];
         [sortingBar segmentAtIndex:i].titleLabel.textAlignment = NSTextAlignmentCenter;
         [[sortingBar segmentAtIndex:i] setDeselectedColor:[UIColor whiteColor]];
@@ -62,80 +67,27 @@
     }
  
     
-    //For single-segment customization
+    //For single-segment customization access them "manually"
     
-    //--------------------------------- SEGMENT1 --------------------------------- //
+    /*
+    [sortingBar segmentAtIndex:0].titleLabel.font = [UIFont systemFontOfSize:15];
+    [[sortingBar segmentAtIndex:0] setTitle:[[NSString stringWithFormat:@"key1"]uppercaseString] forState:UIControlStateNormal];
+    [sortingBar segmentAtIndex:0].titleLabel.textAlignment = NSTextAlignmentCenter;
     
-//    
-//    [sortingBar segmentAtIndex:0].titleLabel.font = [UIFont systemFontOfSize:15];
-//    [[sortingBar segmentAtIndex:0] setTitle:[[NSString stringWithFormat:@"key1"]uppercaseString] forState:UIControlStateNormal];
-//    [sortingBar segmentAtIndex:0].titleLabel.textAlignment = NSTextAlignmentCenter;
-//    
-//    [[sortingBar segmentAtIndex:0] setDeselectedColor:[UIColor whiteColor]];
-//    [[sortingBar segmentAtIndex:0] setSelectedColor:[UIColor lightGrayColor]];
-//    [[sortingBar segmentAtIndex:0] setDeselectedTitleColor:[UIColor grayColor]];
-//    [[sortingBar segmentAtIndex:0] setSelectedTitleColor:[UIColor blackColor]];
-//    
-//    
-//    //--------------------------------- SEGMENT2 --------------------------------- //
-//    
-//    
-//    [sortingBar segmentAtIndex:1].titleLabel.font = [UIFont systemFontOfSize:15];
-//    [[sortingBar segmentAtIndex:1] setTitle:[[NSString stringWithFormat:@"key2"]uppercaseString] forState:UIControlStateNormal];
-//    [sortingBar segmentAtIndex:1].titleLabel.textAlignment = NSTextAlignmentCenter;
-//
-//    [[sortingBar segmentAtIndex:1] setDeselectedColor:[UIColor whiteColor]];
-//    [[sortingBar segmentAtIndex:1] setSelectedColor:[UIColor lightGrayColor]];
-//    [[sortingBar segmentAtIndex:1] setDeselectedTitleColor:[UIColor grayColor]];
-//    [[sortingBar segmentAtIndex:1] setSelectedTitleColor:[UIColor blackColor]];
-//    
-//    
-//    //--------------------------------- SEGMENT3 --------------------------------- //
-//    
-//    [sortingBar segmentAtIndex:2].titleLabel.font = [UIFont systemFontOfSize:15];
-//    [[sortingBar segmentAtIndex:2] setTitle:[[NSString stringWithFormat:@"key3"]uppercaseString] forState:UIControlStateNormal];
-//    [sortingBar segmentAtIndex:2].titleLabel.textAlignment = NSTextAlignmentCenter;
-//
-//    [[sortingBar segmentAtIndex:2] setDeselectedColor:[UIColor whiteColor]];
-//    [[sortingBar segmentAtIndex:2] setSelectedColor:[UIColor lightGrayColor]];
-//    [[sortingBar segmentAtIndex:2] setDeselectedTitleColor:[UIColor grayColor]];
-//    [[sortingBar segmentAtIndex:2] setSelectedTitleColor:[UIColor blackColor]];
-//    
-//    
-//    //--------------------------------- SEGMENT4 --------------------------------- //
-//    
-//    
-//    [sortingBar segmentAtIndex:3].titleLabel.font = [UIFont systemFontOfSize:15];
-//    [[sortingBar segmentAtIndex:3] setTitle:[[NSString stringWithFormat:@"key4"]uppercaseString] forState:UIControlStateNormal];
-//    [sortingBar segmentAtIndex:3].titleLabel.textAlignment = NSTextAlignmentCenter;
-//
-//    [[sortingBar segmentAtIndex:3] setDeselectedColor:[UIColor whiteColor]];
-//    [[sortingBar segmentAtIndex:3] setSelectedColor:[UIColor lightGrayColor]];
-//    [[sortingBar segmentAtIndex:3] setDeselectedTitleColor:[UIColor grayColor]];
-//    [[sortingBar segmentAtIndex:3] setSelectedTitleColor:[UIColor blackColor]];
-//    
-//    
-//    //--------------------------------- SEGMENT5 --------------------------------- //
-//    
-//    
-//    [sortingBar segmentAtIndex:4].titleLabel.font = [UIFont systemFontOfSize:15];
-//    [[sortingBar segmentAtIndex:4] setTitle:[[NSString stringWithFormat:@"key5"]uppercaseString] forState:UIControlStateNormal];
-//    [sortingBar segmentAtIndex:4].titleLabel.textAlignment = NSTextAlignmentCenter;
-//
-//    [[sortingBar segmentAtIndex:4] setDeselectedColor:[UIColor whiteColor]];
-//    [[sortingBar segmentAtIndex:4] setSelectedColor:[UIColor lightGrayColor]];
-//    [[sortingBar segmentAtIndex:4] setDeselectedTitleColor:[UIColor grayColor]];
-//    [[sortingBar segmentAtIndex:4] setSelectedTitleColor:[UIColor blackColor]];
-    
-    
-    //Select initial segment
-    [sortingBar selectSegmentAtIndex:0];
+    [[sortingBar segmentAtIndex:0] setDeselectedColor:[UIColor whiteColor]];
+    [[sortingBar segmentAtIndex:0] setSelectedColor:[UIColor lightGrayColor]];
+    [[sortingBar segmentAtIndex:0] setDeselectedTitleColor:[UIColor grayColor]];
+    [[sortingBar segmentAtIndex:0] setSelectedTitleColor:[UIColor blackColor]];
+    */
     
     
     mainTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, sortingBar.frame.size.height+sortingBar.frame.origin.y, self.view.bounds.size.width, self.view.bounds.size.height-sortingBar.frame.size.height)];
     mainTableView.dataSource = self;
     mainTableView.delegate = self;
     [self.view addSubview:mainTableView];
+    
+    //Select initial segment
+    [sortingBar selectSegmentAtIndex:0];
 }
 
 #pragma mark - segmentedControl delegate
@@ -270,21 +222,17 @@
 
 #pragma mark - Table view data source
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    // Return the number of sections.
     return 1;
 }
 
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    // Return the number of rows in the section.
-    // Usually the number of items in your array (the one that holds your list)
     return [tableData count];
 }
 
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    //Where we configure the cell in each row
     
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell;
@@ -293,7 +241,6 @@
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
-    // Configure the cell... setting the text of our cell's label
 
     NSDictionary *item = [tableData objectAtIndex:indexPath.row];
 
@@ -318,8 +265,6 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Navigation logic may go here. Create and push another view controller.
-    // If you want to push another view upon tapping one of the cells on your table.
 
     NSDictionary *item = [tableData objectAtIndex:indexPath.row];
     

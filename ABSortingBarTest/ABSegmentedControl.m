@@ -40,21 +40,13 @@
 -(void)numberOfSegments:(int)n{
 
     self.numberOfSegments = n;
-    NSLog(@"number of segments: %i", n);
+
     for (int i=0; i<n; i++) {
-        ABSelectableButton *btn = [[ABSelectableButton alloc]initWithFrame:CGRectMake((self.frame.size.width/n)*i, 0, self.frame.size.width/n+0.5, self.frame.size.height)];
+        ABSelectableButton *btn = [[ABSelectableButton alloc]initWithFrame:CGRectMake((self.frame.size.width/n)*i, 0, self.frame.size.width/n, self.frame.size.height)];
         btn.delegate = self;
         [btn setSegmentedSortState:KTSegmentedSortStateNone];
         [self.segments addObject:btn];
-        
-        if (i<n-1) {
-            UIView *linestroker = [[UIView alloc]init];
-            linestroker.frame = CGRectMake(btn.frame.origin.x+btn.frame.size.width-0.5, 5, 0.5, 40);
-            linestroker.backgroundColor = [UIColor darkGrayColor];
-            [self addSubview:linestroker];
-        }
-        
-        
+
     }
     
 
@@ -108,14 +100,11 @@
     }
     
 
-    [UIView animateWithDuration:0.0 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
-        if ([self.sortIconDesc isHidden])
-            self.sortIconDesc.hidden = NO;
-        
-        self.sortIconDesc.frame = CGRectMake(segment.frame.origin.x, (segment.frame.size.height/2), segment.frame.size.width, segment.frame.size.height/2);
-    } completion:^(BOOL finished) {
-        self.sortIconAsc.frame = self.sortIconDesc.frame;
-    }];
+    if ([self.sortIconDesc isHidden])
+        self.sortIconDesc.hidden = NO;
+    
+    self.sortIconDesc.frame = CGRectMake(segment.frame.origin.x, (segment.frame.size.height/2), segment.frame.size.width, segment.frame.size.height/2);
+    self.sortIconAsc.frame = self.sortIconDesc.frame;
     
 }
 
@@ -126,14 +115,11 @@
     }
     
     
-    [UIView animateWithDuration:0.0 animations:^{
-        if ([self.sortIconAsc isHidden])
-            self.sortIconAsc.hidden = NO;
-        
-        self.sortIconAsc.frame = CGRectMake(segment.frame.origin.x, (segment.frame.size.height/2), segment.frame.size.width, segment.frame.size.height/2);
-    } completion:^(BOOL finished) {
-        self.sortIconDesc.frame = self.sortIconAsc.frame;
-    }];
+    if ([self.sortIconAsc isHidden])
+        self.sortIconAsc.hidden = NO;
+    
+    self.sortIconAsc.frame = CGRectMake(segment.frame.origin.x, (segment.frame.size.height/2), segment.frame.size.width, segment.frame.size.height/2);
+    self.sortIconDesc.frame = self.sortIconAsc.frame;
     
 }
 
@@ -144,7 +130,7 @@
     }
     
     [self addSubview:self.sortIconDesc];
-    self.sortIconDesc.hidden = YES;
+    //self.sortIconDesc.hidden = YES;
     
     [self addSubview:self.sortIconAsc];
     //self.sortIconAsc.hidden = YES;

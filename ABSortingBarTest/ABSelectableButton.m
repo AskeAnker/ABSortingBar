@@ -45,10 +45,6 @@
     
 }
 
-- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    [super touchesBegan:touches withEvent:event];
-    [self.nextResponder touchesBegan:touches withEvent:event];
-}
 
 -(void)setSegmentedSortState:(KTSegmentedSortState)segmentedSortState{
 
@@ -61,15 +57,12 @@
 
     switch (state) {
         case KTSegmentedSortStateNone:
-            //DLog(@"selected segment set to state NONE");
             [self setSegmentNormal];
             break;
         case KTSegmentedSortStateDescending:
-            //DLog(@"selected segment set to state DESCENDING");
             [self setSegmentSelected];
             break;
         case KTSegmentedSortStateAscending:
-            //DLog(@"selected segment set to state ASCENDING");
             [self setSegmentSelected];
             break;
             
