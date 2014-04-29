@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EC595502190FA14800B13F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595501190FA14800B13F95 /* Foundation.framework */; };
+		EC595504190FA14800B13F95 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595503190FA14800B13F95 /* CoreGraphics.framework */; };
+		EC595506190FA14800B13F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595505190FA14800B13F95 /* UIKit.framework */; };
+		EC59550C190FA14800B13F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC59550A190FA14800B13F95 /* InfoPlist.strings */; };
+		EC59550E190FA14800B13F95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EC59550D190FA14800B13F95 /* main.m */; };
+		EC595512190FA14800B13F95 /* ABAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EC595511190FA14800B13F95 /* ABAppDelegate.m */; };
+		EC595518190FA14800B13F95 /* ABViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC595517190FA14800B13F95 /* ABViewController.m */; };
+		EC59551A190FA14800B13F95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC595519190FA14800B13F95 /* Images.xcassets */; };
+		EC595521190FA14800B13F95 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595520190FA14800B13F95 /* XCTest.framework */; };
+		EC595522190FA14800B13F95 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595501190FA14800B13F95 /* Foundation.framework */; };
+		EC595523190FA14800B13F95 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC595505190FA14800B13F95 /* UIKit.framework */; };
+		EC59552B190FA14800B13F95 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EC595529190FA14800B13F95 /* InfoPlist.strings */; };
+		EC59552D190FA14800B13F95 /* ABSortingBarTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EC59552C190FA14800B13F95 /* ABSortingBarTestTests.m */; };
+		EC59553A190FA52000B13F95 /* ABSelectableButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC595537190FA52000B13F95 /* ABSelectableButton.m */; };
+		EC59553B190FA52000B13F95 /* ABSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC595539190FA52000B13F95 /* ABSegmentedControl.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EC595524190FA14800B13F95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC5954F6190FA14800B13F95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC5954FD190FA14800B13F95;
+			remoteInfo = ABSortingBarTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EC5954FE190FA14800B13F95 /* ABSortingBarTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABSortingBarTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC595501190FA14800B13F95 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EC595503190FA14800B13F95 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		EC595505190FA14800B13F95 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EC595509190FA14800B13F95 /* ABSortingBarTest-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ABSortingBarTest-Info.plist"; sourceTree = "<group>"; };
+		EC59550B190FA14800B13F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC59550D190FA14800B13F95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EC59550F190FA14800B13F95 /* ABSortingBarTest-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ABSortingBarTest-Prefix.pch"; sourceTree = "<group>"; };
+		EC595510190FA14800B13F95 /* ABAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABAppDelegate.h; sourceTree = "<group>"; };
+		EC595511190FA14800B13F95 /* ABAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABAppDelegate.m; sourceTree = "<group>"; };
+		EC595516190FA14800B13F95 /* ABViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ABViewController.h; sourceTree = "<group>"; };
+		EC595517190FA14800B13F95 /* ABViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABViewController.m; sourceTree = "<group>"; };
+		EC595519190FA14800B13F95 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EC59551F190FA14800B13F95 /* ABSortingBarTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ABSortingBarTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC595520190FA14800B13F95 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		EC595528190FA14800B13F95 /* ABSortingBarTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ABSortingBarTestTests-Info.plist"; sourceTree = "<group>"; };
+		EC59552A190FA14800B13F95 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EC59552C190FA14800B13F95 /* ABSortingBarTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ABSortingBarTestTests.m; sourceTree = "<group>"; };
+		EC595536190FA52000B13F95 /* ABSelectableButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSelectableButton.h; sourceTree = "<group>"; };
+		EC595537190FA52000B13F95 /* ABSelectableButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSelectableButton.m; sourceTree = "<group>"; };
+		EC595538190FA52000B13F95 /* ABSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ABSegmentedControl.h; sourceTree = "<group>"; };
+		EC595539190FA52000B13F95 /* ABSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ABSegmentedControl.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EC5954FB190FA14800B13F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC595504190FA14800B13F95 /* CoreGraphics.framework in Frameworks */,
+				EC595506190FA14800B13F95 /* UIKit.framework in Frameworks */,
+				EC595502190FA14800B13F95 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC59551C190FA14800B13F95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC595521190FA14800B13F95 /* XCTest.framework in Frameworks */,
+				EC595523190FA14800B13F95 /* UIKit.framework in Frameworks */,
+				EC595522190FA14800B13F95 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EC5954F5190FA14800B13F95 = {
+			isa = PBXGroup;
+			children = (
+				EC595507190FA14800B13F95 /* ABSortingBarTest */,
+				EC595526190FA14800B13F95 /* ABSortingBarTestTests */,
+				EC595500190FA14800B13F95 /* Frameworks */,
+				EC5954FF190FA14800B13F95 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EC5954FF190FA14800B13F95 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EC5954FE190FA14800B13F95 /* ABSortingBarTest.app */,
+				EC59551F190FA14800B13F95 /* ABSortingBarTestTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EC595500190FA14800B13F95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EC595501190FA14800B13F95 /* Foundation.framework */,
+				EC595503190FA14800B13F95 /* CoreGraphics.framework */,
+				EC595505190FA14800B13F95 /* UIKit.framework */,
+				EC595520190FA14800B13F95 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EC595507190FA14800B13F95 /* ABSortingBarTest */ = {
+			isa = PBXGroup;
+			children = (
+				EC595510190FA14800B13F95 /* ABAppDelegate.h */,
+				EC595511190FA14800B13F95 /* ABAppDelegate.m */,
+				EC595516190FA14800B13F95 /* ABViewController.h */,
+				EC595517190FA14800B13F95 /* ABViewController.m */,
+				EC59553C190FC3B400B13F95 /* ABSortingBar */,
+				EC595519190FA14800B13F95 /* Images.xcassets */,
+				EC595508190FA14800B13F95 /* Supporting Files */,
+			);
+			path = ABSortingBarTest;
+			sourceTree = "<group>";
+		};
+		EC595508190FA14800B13F95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC595509190FA14800B13F95 /* ABSortingBarTest-Info.plist */,
+				EC59550A190FA14800B13F95 /* InfoPlist.strings */,
+				EC59550D190FA14800B13F95 /* main.m */,
+				EC59550F190FA14800B13F95 /* ABSortingBarTest-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC595526190FA14800B13F95 /* ABSortingBarTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				EC59552C190FA14800B13F95 /* ABSortingBarTestTests.m */,
+				EC595527190FA14800B13F95 /* Supporting Files */,
+			);
+			path = ABSortingBarTestTests;
+			sourceTree = "<group>";
+		};
+		EC595527190FA14800B13F95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EC595528190FA14800B13F95 /* ABSortingBarTestTests-Info.plist */,
+				EC595529190FA14800B13F95 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EC59553C190FC3B400B13F95 /* ABSortingBar */ = {
+			isa = PBXGroup;
+			children = (
+				EC595536190FA52000B13F95 /* ABSelectableButton.h */,
+				EC595537190FA52000B13F95 /* ABSelectableButton.m */,
+				EC595538190FA52000B13F95 /* ABSegmentedControl.h */,
+				EC595539190FA52000B13F95 /* ABSegmentedControl.m */,
+			);
+			name = ABSortingBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EC5954FD190FA14800B13F95 /* ABSortingBarTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC595530190FA14800B13F95 /* Build configuration list for PBXNativeTarget "ABSortingBarTest" */;
+			buildPhases = (
+				EC5954FA190FA14800B13F95 /* Sources */,
+				EC5954FB190FA14800B13F95 /* Frameworks */,
+				EC5954FC190FA14800B13F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ABSortingBarTest;
+			productName = ABSortingBarTest;
+			productReference = EC5954FE190FA14800B13F95 /* ABSortingBarTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC59551E190FA14800B13F95 /* ABSortingBarTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC595533190FA14800B13F95 /* Build configuration list for PBXNativeTarget "ABSortingBarTestTests" */;
+			buildPhases = (
+				EC59551B190FA14800B13F95 /* Sources */,
+				EC59551C190FA14800B13F95 /* Frameworks */,
+				EC59551D190FA14800B13F95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC595525190FA14800B13F95 /* PBXTargetDependency */,
+			);
+			name = ABSortingBarTestTests;
+			productName = ABSortingBarTestTests;
+			productReference = EC59551F190FA14800B13F95 /* ABSortingBarTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EC5954F6190FA14800B13F95 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AB;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Aske Bendtsen";
+				TargetAttributes = {
+					EC59551E190FA14800B13F95 = {
+						TestTargetID = EC5954FD190FA14800B13F95;
+					};
+				};
+			};
+			buildConfigurationList = EC5954F9190FA14800B13F95 /* Build configuration list for PBXProject "ABSortingBarTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EC5954F5190FA14800B13F95;
+			productRefGroup = EC5954FF190FA14800B13F95 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EC5954FD190FA14800B13F95 /* ABSortingBarTest */,
+				EC59551E190FA14800B13F95 /* ABSortingBarTestTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EC5954FC190FA14800B13F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC59551A190FA14800B13F95 /* Images.xcassets in Resources */,
+				EC59550C190FA14800B13F95 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC59551D190FA14800B13F95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC59552B190FA14800B13F95 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EC5954FA190FA14800B13F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC59553B190FA52000B13F95 /* ABSegmentedControl.m in Sources */,
+				EC59550E190FA14800B13F95 /* main.m in Sources */,
+				EC595518190FA14800B13F95 /* ABViewController.m in Sources */,
+				EC59553A190FA52000B13F95 /* ABSelectableButton.m in Sources */,
+				EC595512190FA14800B13F95 /* ABAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC59551B190FA14800B13F95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC59552D190FA14800B13F95 /* ABSortingBarTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EC595525190FA14800B13F95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC5954FD190FA14800B13F95 /* ABSortingBarTest */;
+			targetProxy = EC595524190FA14800B13F95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EC59550A190FA14800B13F95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC59550B190FA14800B13F95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EC595529190FA14800B13F95 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EC59552A190FA14800B13F95 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EC59552E190FA14800B13F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EC59552F190FA14800B13F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EC595531190FA14800B13F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABSortingBarTest/ABSortingBarTest-Prefix.pch";
+				INFOPLIST_FILE = "ABSortingBarTest/ABSortingBarTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EC595532190FA14800B13F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABSortingBarTest/ABSortingBarTest-Prefix.pch";
+				INFOPLIST_FILE = "ABSortingBarTest/ABSortingBarTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		EC595534190FA14800B13F95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ABSortingBarTest.app/ABSortingBarTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABSortingBarTest/ABSortingBarTest-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ABSortingBarTestTests/ABSortingBarTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		EC595535190FA14800B13F95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ABSortingBarTest.app/ABSortingBarTest";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ABSortingBarTest/ABSortingBarTest-Prefix.pch";
+				INFOPLIST_FILE = "ABSortingBarTestTests/ABSortingBarTestTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EC5954F9190FA14800B13F95 /* Build configuration list for PBXProject "ABSortingBarTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC59552E190FA14800B13F95 /* Debug */,
+				EC59552F190FA14800B13F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC595530190FA14800B13F95 /* Build configuration list for PBXNativeTarget "ABSortingBarTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC595531190FA14800B13F95 /* Debug */,
+				EC595532190FA14800B13F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC595533190FA14800B13F95 /* Build configuration list for PBXNativeTarget "ABSortingBarTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC595534190FA14800B13F95 /* Debug */,
+				EC595535190FA14800B13F95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EC5954F6190FA14800B13F95 /* Project object */;
+}
